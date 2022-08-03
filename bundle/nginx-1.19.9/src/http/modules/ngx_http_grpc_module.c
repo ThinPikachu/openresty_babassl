@@ -4903,6 +4903,7 @@ ngx_http_grpc_set_ssl(ngx_conf_t *cf, ngx_http_grpc_loc_conf_t *glcf)
 #else
         if (ngx_ssl_certificate(cf, glcf->upstream.ssl, &glcf->ssl_certificate,
                                 &glcf->ssl_certificate_key, glcf->ssl_passwords) != NGX_OK)
+#endif
         {
             return NGX_ERROR;
         }
